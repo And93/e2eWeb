@@ -1,0 +1,22 @@
+{
+  "name": "end-to-end-autotest",
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "wdio"
+  },
+  "dependencies": {
+    "@types/mocha": "2.2.44",
+    "@types/webdriverio": "4.8.6",
+    "mocha": "4.0.1",
+    "ts-node": "3.3.0",
+    "tsconfig-paths": "2.4.0",
+    "tslint": "5.8.0",
+    "typescript": "2.6.2",
+    "wdio-chromedriver-service": "0.1.1",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "4.9.11"
+  }
+}
