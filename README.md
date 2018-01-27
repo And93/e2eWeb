@@ -9,5 +9,5 @@
 Рекомендуемая версия nodejs v8.9.1, npm v5.5.1.
 Все автотесты запускаются при помощи команды npm test в директории end-to-end-autotest.
 
-Хорошая документация есть на сайте (проекта) [http://webdriver.io/]
+Хорошая документация есть на сайте [проекта] (http://webdriver.io/)
 а так же в репозитории https://github.com/webdriverio/webdriverio/
