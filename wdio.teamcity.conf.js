@@ -11,9 +11,10 @@ exports.config = {
         maxInstances: 5,
         browserName: 'chrome',
         chromeOptions: {
-            args: ['--headless'],
-            binary: ['c:/Users/andre/AppData/Local/Google/Chrome/Application/chrome.exe']
-        }}
+            args: ['--headless']
+        },
+        binary: ['c:/Users/andre/AppData/Local/Google/Chrome/Application/chrome.exe']
+    }
     ],
     sync: true,
     logLevel: 'error',
