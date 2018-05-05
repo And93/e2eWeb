@@ -4,7 +4,7 @@ exports.config = {
         './src/tests/**/*.ts'
     ],
     exclude: [
-        // 'path/to/excluded/files'
+        'src/tests/web/*.ts'
     ],
     maxInstances: 5,
     capabilities: [{
@@ -26,7 +26,7 @@ exports.config = {
     waitforTimeout: 20000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
-    services: ['selenium-standalone'],//
+    services: ['selenium-standalone'],
     framework: 'mocha',
     reporters: ['teamcity'],
     mochaOpts: {

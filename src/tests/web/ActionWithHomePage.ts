@@ -14,9 +14,9 @@ const homePage = new HomePage(browser),
     realtTextTab = "НЕДВИЖИМОСТЬ",
     forumTextTab = "ФОРУМ";
 
-describe('action with my most favorite web-portal Onliner.by:', function () {
+describe("action with my most favorite web-portal Onliner.by:", function () {
 
-    it('should check load main page', function () {
+    it("should check load main page", function () {
 
         homePage.openHomePage();
         homePage.homeBlock.logoOnliner.waitForVisible();
@@ -32,7 +32,7 @@ describe('action with my most favorite web-portal Onliner.by:', function () {
         homePage.homeBlock.asserts.title(homePageTitle);
     });
 
-    it('should check clickable button and load catalog page', function () {
+    it("should check clickable button and load catalog page", function () {
 
         homePage.headerBlock.catalogTab.click();
         catalogPage.mainCatalogBlock.asserts.title(catalogPageTitle);
@@ -43,7 +43,7 @@ describe('action with my most favorite web-portal Onliner.by:', function () {
         homePage.homeBlock.pushNotification.waitForVisible(timeout.s, true);
     });
 
-    it('should move to tab and check it', function () {
+    it("should move to tab and check it", function () {
 
         homePage.headerBlock.newsTab.moveToObject();
         homePage.headerBlock.dropDownMenu.waitForVisible();
@@ -72,7 +72,7 @@ describe('action with my most favorite web-portal Onliner.by:', function () {
         homePage.headerBlock.dropDownMenu.waitForVisible(timeout.s, true);
     });
 
-    it('should scroll to subBlock and check it', function () {
+    it("should scroll to subBlock and check it", function () {
 
         browser.scroll(homePage.homeBlock.peopleSubBlockTab.selector);
         homePage.headerBlock.asserts.text(homePage.homeBlock.peopleSubBlockTab, peopleTextTab);
@@ -93,7 +93,7 @@ describe('action with my most favorite web-portal Onliner.by:', function () {
         homePage.headerBlock.asserts.text(homePage.homeBlock.forumSubBlockTab, forumTextTab);
     });
 
-    it('should search element', function () {
+    it("should search element", function () {
 
         homePage.homeBlock.fillSearch(SearchSample)
     });

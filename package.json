@@ -4,16 +4,19 @@
   "scripts": {
     "tsc": "tsc",
     "test": "wdio",
+    "test:appium": "wdio wdio.appium.js",
     "test:teamcity": "wdio wdio.teamcity.conf.js"
   },
   "dependencies": {
     "@types/mocha": "5.0.0",
     "@types/webdriverio": "4.10.1",
+    "appium": "1.7.2",
     "mocha": "5.1.0",
     "ts-node": "5.0.1",
     "tsconfig-paths": "3.2.0",
     "tslint": "5.9.1",
     "typescript": "2.8.1",
+    "wdio-appium-service": "0.2.3",
     "wdio-chromedriver-service": "0.1.2",
     "wdio-dot-reporter": "0.0.9",
     "wdio-mocha-framework": "0.5.13",
