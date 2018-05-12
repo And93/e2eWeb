@@ -1,6 +1,8 @@
 End-to-end web autotest
 ======
 
+## Description
+In this repository is the code of the autotest of the main page onliner.by
 
 ## Stack
 JavaScript (TypeScript) - NodeJs - Selenium - Mocha - Webdriver.io;
