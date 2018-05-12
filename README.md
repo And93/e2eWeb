@@ -1,4 +1,4 @@
-End-to-end web autotest
+End-to-end web autotests
 ======
 
 ## Description
