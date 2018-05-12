@@ -1,11 +1,12 @@
+var timeout = 30000;
+var baseUrl = "https://www.onliner.by/";
+
 exports.config = {
 
     specs: [
         './src/tests/**/*.ts'
     ],
-    exclude: [
-        'src/tests/web/*.ts'
-    ],
+    exclude: [],
     maxInstances: 5,
     capabilities: [{
         maxInstances: 5,
@@ -21,17 +22,17 @@ exports.config = {
     coloredLogs: true,
     deprecationWarnings: false,
     bail: 0,
-    screenshotPath: './errorShots/',
-    baseUrl: "https://www.onliner.by/",
-    waitforTimeout: 20000,
-    connectionRetryTimeout: 90000,
+    screenshotPath: './screenshots/',
+    baseUrl: baseUrl,
+    waitforTimeout: timeout,
+    connectionRetryTimeout: timeout * 2,
     connectionRetryCount: 3,
     services: ['selenium-standalone'],
     framework: 'mocha',
     reporters: ['teamcity'],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 9000000,
+        timeout: timeout * 4,
         compilers: [
             'ts-node/register',
             'tsconfig-paths/register'

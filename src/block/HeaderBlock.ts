@@ -22,31 +22,31 @@ export class HeaderBlock extends BaseBlock {
     };
 
     get catalogTab() {
-        return this.getElement(`[href='https://catalog.onliner.by/']${this.tabChildSelector}`);
+        return this.getElement(HeaderBlock.baseUrl("catalog", "/") + this.tabChildSelector);
     };
 
     get newsTab() {
-        return this.getElement(`[href='https://www.onliner.by']${this.tabChildSelector}`);
+        return this.getElement(HeaderBlock.baseUrl("www") + this.tabChildSelector);
     };
 
     get autoTab() {
-        return this.getElement(`[href='https://ab.onliner.by']${this.tabChildSelector}`)
+        return this.getElement( HeaderBlock.baseUrl("ab") + this.tabChildSelector);
     };
 
     get realtTab() {
-        return this.getElement(`[href='https://r.onliner.by/pk']${this.tabChildSelector}`)
+        return this.getElement(HeaderBlock.baseUrl("r", "/pk") + this.tabChildSelector);
     };
 
     get servicesTab() {
-        return this.getElement(`[href="https://s.onliner.by"]${this.tabChildSelector}`)
+        return this.getElement(HeaderBlock.baseUrl("s", "/tasks") + this.tabChildSelector);
     };
 
     get baraholkaTab() {
-        return this.getElement(`[href="https://baraholka.onliner.by/"]${this.tabChildSelector}`)
+        return this.getElement(HeaderBlock.baseUrl("baraholka", "/") + this.tabChildSelector);
     };
 
     get forumTab() {
-        return this.getElement(`[href="https://forum.onliner.by/"]${this.tabChildSelector}`)
+        return this.getElement(HeaderBlock.baseUrl("forum", "/") + this.tabChildSelector);
     };
 
     get dropDownMenu() {
@@ -54,34 +54,38 @@ export class HeaderBlock extends BaseBlock {
     };
 
     get peopleColumn() {
-        return this.browser.$(`[href='https://people.onliner.by']${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("people") + this.dropDownTitleChildSelector);
     };
 
     get autoColumn() {
-        return this.browser.$(`[href="https://auto.onliner.by"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("auto") + this.dropDownTitleChildSelector);
     };
 
     get techColumn() {
-        return this.browser.$(`[href="https://tech.onliner.by"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("tech") + this.dropDownTitleChildSelector);
     };
 
     get realtColumn() {
-        return this.browser.$(`[href="https://realt.onliner.by"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("realt") + this.dropDownTitleChildSelector);
     };
 
     get abColumn() {
-        return this.browser.$(`[href="https://ab.onliner.by"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("ab") + this.dropDownTitleChildSelector);
     };
 
     get mbColumn() {
-        return this.browser.$(`[href="https://mb.onliner.by"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("mb") + this.dropDownTitleChildSelector);
     };
 
     get saleColumn() {
-        return this.browser.$(`[href="https://r.onliner.by/pk"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("r", "/pk") + this.dropDownTitleChildSelector);
     };
 
     get leaseColumn() {
-        return this.browser.$(`[href="https://r.onliner.by/ak"]${this.dropDownTitleChildSelector}`)
+        return this.browser.$(HeaderBlock.baseUrl("r", "/ak") + this.dropDownTitleChildSelector);
+    };
+
+    private static baseUrl(prefix: string, postfix: string = "") {
+        return `[href="https://${prefix}.onliner.by${postfix}"]`;
     };
 }
