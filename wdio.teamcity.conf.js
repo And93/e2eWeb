@@ -14,7 +14,7 @@ exports.config = {
         chromeOptions: {
             args: ['--headless']
         },
-        binary: ['c:\\Users\\andre\\AppData\\Local\\Google\\Chrome\\Application\\']
+        binary: ['c:/Users/andre/AppData/Local/Google/Chrome/Application/']
     }
     ],
     sync: true,
