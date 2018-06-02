@@ -5,7 +5,7 @@
     "tsc": "tsc",
     "test": "wdio",
     "test:teamcity": "wdio wdio.teamcity.conf.js",
-    "allure:report": "allure generate allure-results"
+    "allure:report": "allure generate allure-results --clean"
   },
   "dependencies": {
     "@types/mocha": "5.2.0",
