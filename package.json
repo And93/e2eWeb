@@ -4,7 +4,8 @@
   "scripts": {
     "tsc": "tsc",
     "test": "wdio",
-    "test:teamcity": "wdio wdio.teamcity.conf.js"
+    "test:teamcity": "wdio wdio.teamcity.conf.js",
+    "allure:report": "allure generate allure-results"
   },
   "dependencies": {
     "@types/mocha": "5.2.0",
