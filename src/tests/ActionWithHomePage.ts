@@ -93,7 +93,7 @@ describe("action with my most favorite web-portal Onliner.by:", function () {
         homePage.headerBlock.asserts.text(homePage.homeBlock.forumSubBlockTab, forumTextTab);
     });
 
-    it("should search element", function () {
+    it.skip("should search element", function () {
 
         homePage.homeBlock.fillSearch(SearchSample)
     });
