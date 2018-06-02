@@ -29,7 +29,12 @@ exports.config = {
     connectionRetryCount: 3,
     services: ['selenium-standalone'],
     framework: 'mocha',
-    reporters: ['teamcity'],
+    reporters: ['teamcity', 'allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: 'allure-results'
+        }
+    },
     mochaOpts: {
         ui: 'bdd',
         timeout: timeout * 4,

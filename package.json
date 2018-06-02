@@ -14,6 +14,7 @@
     "tsconfig-paths": "3.3.2",
     "tslint": "5.10.0",
     "typescript": "2.8.3",
+    "wdio-allure-reporter": "0.6.2",
     "wdio-dot-reporter": "0.0.9",
     "wdio-mocha-framework": "0.5.13",
     "wdio-selenium-standalone-service": "0.0.10",
