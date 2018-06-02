@@ -1,5 +1,7 @@
 .idea
 node_modules
 target
+allure-report
+allure-results
 
 errorShots/**
