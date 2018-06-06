@@ -5,6 +5,7 @@
     "tsc": "tsc",
     "test": "wdio",
     "test:teamcity": "wdio wdio.teamcity.conf.js",
+    "test:jenkins": "wdio wdio.jenkins.conf.js",
     "allure:report": "allure generate allure-results --clean"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "typescript": "2.8.3",
     "wdio-allure-reporter": "0.6.2",
     "wdio-dot-reporter": "0.0.9",
+    "wdio-junit-reporter": "^0.4.3",
     "wdio-mocha-framework": "0.5.13",
     "wdio-selenium-standalone-service": "0.0.10",
     "wdio-teamcity-reporter": "1.1.1",
