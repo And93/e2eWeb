@@ -8,6 +8,11 @@
     "test:jenkins": "wdio wdio.jenkins.conf.js",
     "allure:report": "allure generate allure-results --clean"
   },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.7.1"
+  },
+  "engineStrict": true,
   "dependencies": {
     "@types/mocha": "5.2.0",
     "@types/webdriverio": "4.10.1",

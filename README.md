@@ -30,7 +30,7 @@ PageObject, BlockObject, AssertsObject, Helper.
 
 ## Requirements
 nodejs >= v8.9.1
-npm >= 5.5.1
+npm >= 5.7.1
 
 
 ## Docs
