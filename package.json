@@ -1,6 +1,7 @@
 {
   "name": "e2eWeb",
   "version": "1.0.0",
+  "license": "ISC",
   "scripts": {
     "tsc": "tsc",
     "test": "wdio",
@@ -21,11 +22,13 @@
     "tsconfig-paths": "3.3.2",
     "tslint": "5.10.0",
     "typescript": "2.8.3",
+    "allure-commandline": "2.5.0",
     "wdio-allure-reporter": "0.6.2",
     "wdio-dot-reporter": "0.0.9",
-    "wdio-junit-reporter": "^0.4.3",
+    "wdio-junit-reporter": "0.4.3",
     "wdio-mocha-framework": "0.5.13",
     "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-sync": "0.7.1",
     "wdio-teamcity-reporter": "1.1.1",
     "webdriverio": "4.12.0"
   }
