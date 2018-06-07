@@ -5,7 +5,7 @@ End-to-end web autotests
 In this repository is the code of the autotest of the main page onliner.by
 
 ## Stack
-JavaScript (TypeScript) - NodeJs - Selenium - Mocha - Webdriver.io;
+JavaScript (TypeScript) - NodeJs - Selenium - Mocha - Webdriver.io - Allure;
 
 
 ## Run test
@@ -21,6 +21,13 @@ npm test
 cd e2eWeb
 npm install
 npm run test:teamcity
+```
+
+3. Jenkins
+```bash
+cd e2eWeb
+npm install
+npm run test:jenkins
 ```
 
 
