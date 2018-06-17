@@ -11,27 +11,37 @@ export class HomeBlock extends BaseBlock {
 
     private _search: SearchElement;
     private _subBlockParent = ".b-main-page-grid-4.b-main-page-news-2";
+    private logoOnliner = ".b-top-logo";
+    private pushNotification = ".push-notification__content";
+    private pushNotificationCloseButton = ".push-notification__close";
+    private searchField = "onliner_main";
+    private peopleSubBlockTab = `${this._subBlockParent} [href='https://people.onliner.by']`;
+    private opinionSubBlockTab = `${this._subBlockParent} [href='https://people.onliner.by/opinions']`;
+    private autoSubBlockTab = `${this._subBlockParent} [href='https://auto.onliner.by']`;
+    private techSubBlockTab = `${this._subBlockParent} [href='https://tech.onliner.by']`;
+    private realtSubBlockTab = `${this._subBlockParent} [href='https://realt.onliner.by']`;
+    private forumSubBlockTab = `${this._subBlockParent} [href='https://forum.onliner.by/']`;
 
     constructor(protected browser: WebdriverIO.Client<void>) {
         super(browser);
         this.asserts = new HomeBlockAsserts(this.browser, this);
     };
 
-    get logoOnliner() {
-        return this.browser.$(".b-top-logo")
+    get getLogoOnliner() {
+        return this.browser.$(this.logoOnliner);
     };
 
-    get pushNotification() {
-        return this.browser.$(".push-notification__content")
+    get getPushNotification() {
+        return this.browser.$(this.pushNotification);
     };
 
-    get pushNotificationClose() {
-        return this.getElement(".push-notification__close")
+    get getPushNotificationCloseButton() {
+        return this.getElement(this.pushNotificationCloseButton);
     };
 
     private get search(): SearchElement {
         if (!this._search) {
-            this._search = new SearchElement("onliner_main")
+            this._search = new SearchElement(this.searchField)
         }
         return this._search;
     };
@@ -40,27 +50,27 @@ export class HomeBlock extends BaseBlock {
         this.search.setValue(value.value);
     };
 
-    get peopleSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://people.onliner.by']`)
+    get getPeopleSubBlockTab() {
+        return this.browser.$(this.peopleSubBlockTab)
     };
 
-    get opinionSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://people.onliner.by/opinions']`)
+    get getOpinionSubBlockTab() {
+        return this.browser.$(this.opinionSubBlockTab)
     };
 
-    get autoSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://auto.onliner.by']`)
+    get getAutoSubBlockTab() {
+        return this.browser.$(this.autoSubBlockTab)
     };
 
-    get techSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://tech.onliner.by']`)
+    get getTechSubBlockTab() {
+        return this.browser.$(this.techSubBlockTab)
     };
 
-    get realtSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://realt.onliner.by']`)
+    get getRealtSubBlockTab() {
+        return this.browser.$(this.realtSubBlockTab)
     };
 
-    get forumSubBlockTab() {
-        return this.browser.$(`${this._subBlockParent} [href='https://forum.onliner.by/']`)
+    get getForumSubBlockTab() {
+        return this.browser.$(this.forumSubBlockTab)
     };
 }

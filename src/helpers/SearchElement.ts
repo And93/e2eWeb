@@ -3,6 +3,8 @@ import {BaseBlock} from "src/block/BaseBlock";
 export class SearchElement extends BaseBlock {
 
     private input: string;
+    private _window = ".modal-iframe";
+    private _searchResults = ".search__results";
 
     constructor(private fieldName: string) {
         super(browser);
@@ -10,11 +12,11 @@ export class SearchElement extends BaseBlock {
     };
 
     private get window() {
-        return this.browser.$(".modal-iframe")
+        return this.browser.$(this._window)
     };
 
     private get resultSearch() {
-        return this.browser.$(".search__results")
+        return this.browser.$(this._searchResults)
     };
 
     private getOptions(title: string) {

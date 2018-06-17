@@ -17,21 +17,13 @@ export class BaseBlock {
 
     public getElement(selector: string | PageElement, needVisible: boolean = true): PageElement {
 
-        if (typeof selector === "string") {
-            if (!this.browser.$(selector).isExisting()) {
-                this.browser.$(selector).waitForExist()
-            } else if (needVisible && !this.browser.$(selector).isVisible()) {
-                this.browser.$(selector).waitForVisible()
-            }
-        } else {
-            if (!selector.isExisting()) {
-                selector.waitForExist()
-            } else if (needVisible && !selector.isVisible()) {
-                selector.waitForVisible()
-            }
-        }
+        const element = typeof selector === "string" ? this.browser.$(selector) : selector;
 
-        let element = typeof selector === "string" ? this.browser.$(selector) : selector;
+        if (!element.isExisting()) {
+            element.waitForExist();
+        } else if (!element.isVisible() && needVisible) {
+            element.waitForVisible();
+        }
 
         return element;
     };
