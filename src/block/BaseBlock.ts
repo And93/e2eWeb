@@ -17,7 +17,7 @@ export abstract class BaseBlock {
 
     public getElement(selector: string | PageElement, needVisible: boolean = true): PageElement {
 
-        const element = typeof selector === "string" ? this.browser.$(selector) : selector;
+        const element: PageElement = typeof selector === "string" ? this.browser.$(selector) : selector;
 
         if (!element.isExisting()) {
             element.waitForExist();
