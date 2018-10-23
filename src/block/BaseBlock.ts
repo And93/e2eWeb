@@ -10,9 +10,9 @@ export const timeout = {
     xl: 30000,
 };
 
-export class BaseBlock {
+export abstract class BaseBlock {
 
-    constructor(protected browser: WebdriverIO.Client<void>) {
+    protected constructor(protected browser: WebdriverIO.Client<void>) {
     }
 
     public getElement(selector: string | PageElement, needVisible: boolean = true): PageElement {

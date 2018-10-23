@@ -3,5 +3,5 @@ import {HomeBlock} from "src/block/home/HomeBlock";
 
 export class HomeBlockAsserts extends BaseAsserts {
 
-    protected block: HomeBlock
+    protected block: HomeBlock;
 }
