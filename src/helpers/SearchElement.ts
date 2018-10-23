@@ -12,15 +12,15 @@ export class SearchElement extends BaseBlock {
     };
 
     private get window() {
-        return this.browser.$(this._window)
+        return this.browser.$(this._window);
     };
 
     private get resultSearch() {
-        return this.browser.$(this._searchResults)
+        return this.browser.$(this._searchResults);
     };
 
     private getOptions(title: string) {
-        return this.getElement(`a*=${title}`)
+        return this.getElement(`a*=${title}`);
     };
 
     public setValue(value: string) {

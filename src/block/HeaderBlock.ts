@@ -70,7 +70,7 @@ export class HeaderBlock extends BaseBlock {
     };
 
     get getDropDownMenu() {
-        return this.browser.$(this.dropDownMenu)
+        return this.browser.$(this.dropDownMenu);
     };
 
     get getPeopleColumn() {

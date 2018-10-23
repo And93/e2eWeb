@@ -14,9 +14,9 @@ const homePage = new HomePage(browser),
     realtTextTab = "НЕДВИЖИМОСТЬ",
     forumTextTab = "ФОРУМ";
 
-describe("HomePageTest:", function () {
+describe("HomePageTest:", () => {
 
-    it("should check load main page", function () {
+    it("should check load main page", () => {
 
         homePage.openHomePage();
         homePage.homeBlock.getLogoOnliner.waitForVisible();
@@ -32,7 +32,7 @@ describe("HomePageTest:", function () {
         homePage.homeBlock.asserts.title(homePageTitle);
     });
 
-    it("should check clickable button and load catalog page", function () {
+    it("should check clickable button and load catalog page", () => {
 
         homePage.headerBlock.getCatalogTab.click();
         catalogPage.mainCatalogBlock.asserts.title(catalogPageTitle);
@@ -43,15 +43,15 @@ describe("HomePageTest:", function () {
         homePage.homeBlock.getPushNotification.waitForVisible(timeout.s, true);
     });
 
-    it.skip("should search element", function () {
-        homePage.homeBlock.fillSearch(SearchSample)
+    it.skip("should search element", () => {
+        homePage.homeBlock.fillSearch(SearchSample);
     });
 
-    describe("Tab in main page:", function () {
+    describe("Tab in main page:", () => {
 
-        context("When move to Tab, Tab and Drop Down Menu should be visible", function () {
+        context("When move to Tab, Tab and Drop Down Menu should be visible", () => {
 
-            it("should check News-Tab", function () {
+            it("should check News-Tab", () => {
                 homePage.headerBlock.getNewsTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible();
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getPeopleColumn, homePage.headerBlock.peopleText);
@@ -60,67 +60,67 @@ describe("HomePageTest:", function () {
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getRealtColumn, homePage.headerBlock.realtText);
             });
 
-            it("should check Auto-Tab", function () {
+            it("should check Auto-Tab", () => {
                 homePage.headerBlock.getAutoTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible();
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getAbColumn, homePage.headerBlock.abText);
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getMbColumn, homePage.headerBlock.mbText);
             });
 
-            it("should check Realt-Tab", function () {
+            it("should check Realt-Tab", () => {
                 homePage.headerBlock.getRealtTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible();
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getSaleColumn, homePage.headerBlock.saleText);
                 homePage.headerBlock.asserts.text(homePage.headerBlock.getLeaseColumn, homePage.headerBlock.leaseText);
             });
 
-            it("should check Services-Tab", function () {
+            it("should check Services-Tab", () => {
                 homePage.headerBlock.getServicesTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible(timeout.s, true);
             });
 
-            it("should check Baraholka-Tab", function () {
+            it("should check Baraholka-Tab", () => {
                 homePage.headerBlock.getBaraholkaTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible(timeout.s, true);
             });
 
-            it("should check Forum-Tab", function () {
+            it("should check Forum-Tab", () => {
                 homePage.headerBlock.getForumTab.moveToObject();
                 homePage.headerBlock.getDropDownMenu.waitForVisible(timeout.s, true);
             });
         });
     });
 
-    describe("SubBlock in main page:", function () {
+    describe("SubBlock in main page:", () => {
 
-        context("When scroll to SubBlock, SubBlock and content should be visible", function () {
+        context("When scroll to SubBlock, SubBlock and content should be visible", () => {
 
-            it("should check People-SubBlock", function () {
+            it("should check People-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getPeopleSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getPeopleSubBlockTab, peopleTextTab);
             });
 
-            it("should check Opinion-SubBlock", function () {
+            it("should check Opinion-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getOpinionSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getOpinionSubBlockTab, opinionTextTab);
             });
 
-            it("should check Auto-SubBlock", function () {
+            it("should check Auto-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getAutoSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getAutoSubBlockTab, autoTextTab);
             });
 
-            it("should check Tech-SubBlock", function () {
+            it("should check Tech-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getTechSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getTechSubBlockTab, techTextTab);
             });
 
-            it("should check Realt-SubBlock", function () {
+            it("should check Realt-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getRealtSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getRealtSubBlockTab, realtTextTab);
             });
 
-            it("should check Forum-SubBlock", function () {
+            it("should check Forum-SubBlock", () => {
                 browser.scroll(homePage.homeBlock.getForumSubBlockTab.selector);
                 homePage.headerBlock.asserts.text(homePage.homeBlock.getForumSubBlockTab, forumTextTab);
             });

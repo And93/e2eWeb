@@ -3,10 +3,10 @@ import {BaseBlock} from "src/block/BaseBlock";
 export class BasePage extends BaseBlock {
 
     constructor(protected browser: WebdriverIO.Client<void>) {
-        super(browser)
+        super(browser);
     };
 
     public openHomePage() {
-        return this.browser.url("/")
+        return this.browser.url("/");
     };
 }

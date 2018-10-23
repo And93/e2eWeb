@@ -41,7 +41,7 @@ export class HomeBlock extends BaseBlock {
 
     private get search(): SearchElement {
         if (!this._search) {
-            this._search = new SearchElement(this.searchField)
+            this._search = new SearchElement(this.searchField);
         }
         return this._search;
     };
@@ -51,26 +51,26 @@ export class HomeBlock extends BaseBlock {
     };
 
     get getPeopleSubBlockTab() {
-        return this.browser.$(this.peopleSubBlockTab)
+        return this.browser.$(this.peopleSubBlockTab);
     };
 
     get getOpinionSubBlockTab() {
-        return this.browser.$(this.opinionSubBlockTab)
+        return this.browser.$(this.opinionSubBlockTab);
     };
 
     get getAutoSubBlockTab() {
-        return this.browser.$(this.autoSubBlockTab)
+        return this.browser.$(this.autoSubBlockTab);
     };
 
     get getTechSubBlockTab() {
-        return this.browser.$(this.techSubBlockTab)
+        return this.browser.$(this.techSubBlockTab);
     };
 
     get getRealtSubBlockTab() {
-        return this.browser.$(this.realtSubBlockTab)
+        return this.browser.$(this.realtSubBlockTab);
     };
 
     get getForumSubBlockTab() {
-        return this.browser.$(this.forumSubBlockTab)
+        return this.browser.$(this.forumSubBlockTab);
     };
 }

@@ -10,17 +10,17 @@ export class BaseAsserts {
         const getTitle = this.browser.getTitle();
 
         this.browser.waitUntil(
-            async () => getTitle === title,
+            () => getTitle === title,
             timeout.m,
             `The title of page: ${getTitle} but expected: ${title}`
-        )
+        );
     };
 
     public text(element: PageElement, content: string) {
         this.browser.waitUntil(
-            async () => element.getText() === content,
+            () => element.getText() === content,
             timeout.m,
             `The text in the element: ${element.selector} does not match the expected: ${content}`
-        )
+        );
     };
 }
