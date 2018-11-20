@@ -32,7 +32,7 @@ npm run test:jenkins
 
 
 ## Use pattern
-PageObject, BlockObject, AssertsObject, Helper.
+PageObject, AssertsObject, Helper.
 
 
 ## Requirements
